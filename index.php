@@ -1,5 +1,10 @@
 <?php
 
+// index.php
+
+// Load Configurations
+require_once __DIR__ . '/config.php';
+
 // Set HTTP header for JSON response
 header('Content-Type: application/json');
 

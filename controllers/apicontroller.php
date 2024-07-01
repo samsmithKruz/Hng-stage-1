@@ -13,8 +13,8 @@ class apiController
         $visitor_name = empty($visitor_name) ? "Guest" : $visitor_name;
         $ip = htmlspecialchars($_SERVER['REMOTE_ADDR']);
 
-        $weather_api_key = "6fbb1a5554e3428f8d4125307240107";
-        $response = @json_decode(file_get_contents("https://api.weatherapi.com/v1/current.json?q=$ip&key=6fbb1a5554e3428f8d4125307240107"));
+        $weather_api_key = API_KEY;
+        $response = @json_decode(file_get_contents("https://api.weatherapi.com/v1/current.json?q=$ip&key=$weather_api_key"));
 
         echo json_encode([
             "client_ip" => $ip, // The IP address of the requester
